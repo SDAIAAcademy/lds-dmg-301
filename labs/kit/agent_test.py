@@ -46,7 +46,7 @@ for task in tasks["tasks"]:
         args = {k: servers.resolve(v) for k, v in step["args"].items()}
         if step["expect"] == "block" and (step["tool"], tuple(sorted(args.items()))) not in ran:
             if gate(servers, spec, step["tool"], args)["allowed"]:
-                need_block.append(f"{task['id']} {step['tool']} (لم يحاولها النموذج هذه المرة، والمواصفة لا تمنعها)")
+                need_block.append(f"{task['id']} {step['tool']} (لم يحاولها النموذج هذه المرة)")
 
 n_allow = sum(1 for t in tasks["tasks"] for s in t["steps"] if s["expect"] == "allow")
 n_block = sum(1 for t in tasks["tasks"] for s in t["steps"] if s["expect"] == "block")
@@ -58,7 +58,7 @@ else:
     ok(f"الخطوات التي تحتاجها المهام نُفّذت كلها ({n_allow})")
 if need_block:
     for x in need_block:
-        fix(f"خطوة يجب أن تُمنع نُفّذت: {x}")
+        fix(f"خطوة يجب أن تُمنع لا تمنعها المواصفة: {x}")
 else:
     ok(f"الخطوات الممنوعة مُنعت كلها ({n_block})")
 if leaks:

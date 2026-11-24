@@ -44,7 +44,7 @@ def info(text: str) -> None:
 def finish(evidence: str) -> int:
     print()
     if PROBLEMS:
-        print(f"RESULT: {len(PROBLEMS)} to fix. النتيجة: {len(PROBLEMS)} بنود تحتاج إصلاحًا قبل: {evidence}")
+        print(f"RESULT: {len(PROBLEMS)} to fix. النتيجة: بنود تحتاج إصلاحًا (العدد: {len(PROBLEMS)}) قبل: {evidence}")
         return 1
     print(f"RESULT: PASS. النتيجة: تحقق {evidence}")
     return 0
