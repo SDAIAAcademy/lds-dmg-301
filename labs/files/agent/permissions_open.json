@@ -1,0 +1,56 @@
+{
+  "_help": "مواصفة الصلاحيات. لكل أداة mode: denied أو read_only أو scoped أو approval. fields: الحقول التي تصل إلى النموذج (فارغة = كل الحقول). scope: القيم المسموحة لوسائط الأداة. approver: دور الموافق لنمط approval.",
+  "agent": "وكيل جدولة الكشف الميداني",
+  "tools": {
+    "search_applications": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "get_application_summary": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "get_application_documents": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "update_status": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "add_note": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "list_inspector_slots": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "book_inspection": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "send_sms_to_applicant": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "send_email": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    },
+    "export_applications_csv": {
+      "mode": "scoped",
+      "fields": [],
+      "scope": {}
+    }
+  }
+}

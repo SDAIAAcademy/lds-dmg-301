@@ -1,0 +1,87 @@
+{
+  "_help": "مواصفة الصلاحيات. لكل أداة mode: denied أو read_only أو scoped أو approval. fields: الحقول التي تصل إلى النموذج (فارغة = كل الحقول). scope: القيم المسموحة لوسائط الأداة. approver: دور الموافق لنمط approval.",
+  "agent": "وكيل جدولة الكشف الميداني",
+  "tools": {
+    "search_applications": {
+      "mode": "scoped",
+      "fields": [
+        "handle",
+        "district",
+        "status",
+        "inspection_window",
+        "missing_document_types"
+      ],
+      "scope": {
+        "status": [
+          "بانتظار الكشف",
+          "بانتظار مستندات"
+        ]
+      }
+    },
+    "get_application_summary": {
+      "mode": "read_only",
+      "fields": [
+        "handle",
+        "district",
+        "status",
+        "inspection_window",
+        "missing_document_types"
+      ],
+      "scope": {}
+    },
+    "get_application_documents": {
+      "mode": "denied"
+    },
+    "update_status": {
+      "mode": "approval",
+      "approver": "مشرف الكشف الميداني",
+      "scope": {
+        "status": [
+          "تمت جدولة الكشف"
+        ]
+      }
+    },
+    "add_note": {
+      "mode": "denied"
+    },
+    "list_inspector_slots": {
+      "mode": "read_only",
+      "fields": [
+        "slot_id",
+        "district",
+        "week",
+        "inspector"
+      ],
+      "scope": {}
+    },
+    "book_inspection": {
+      "mode": "scoped",
+      "fields": [
+        "slot_id",
+        "handle",
+        "result"
+      ],
+      "scope": {
+        "status": [
+          "بانتظار الكشف"
+        ]
+      }
+    },
+    "send_sms_to_applicant": {
+      "mode": "approval",
+      "approver": "مشرف الكشف الميداني",
+      "scope": {
+        "template_id": [
+          "T-VISIT",
+          "T-DOCS"
+        ]
+      }
+    },
+    "send_email": {
+      "mode": "denied"
+    },
+    "export_applications_csv": {
+      "mode": "denied"
+    }
+  }
+}

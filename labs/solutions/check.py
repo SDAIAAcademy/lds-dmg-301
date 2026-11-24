@@ -74,7 +74,41 @@ def lab_1_2() -> None:
                "مقاطع بلا وسم مستوى: 18 من 18", "ملفات طلبات بلا مسند إليه: 10 من 10", "4 من 4", "RESULT: PASS")
 
 
-LABS_ALL = {"1.1": lab_1_1, "1.2": lab_1_2}
+def lab_2_1() -> None:
+    t = expect(["kit/agent_test.py"], 1, "RESULT: 16 to fix", "T07 send_email", "T07 list_inspector_slots",
+               "T10 get_application_summary: national_id, mobile")
+    expect(["kit/agent_run.py", "T07"], 0, "surveys@contractor.example")
+    t = expect(["kit/agent_test.py", "solutions/reference/permissions_reference.json"], 0,
+               r"نُفّذت كلها \(10\)", r"مُنعت كلها \(8\)", "لا حقل شخصي", "RESULT: PASS")
+    expect(["kit/agent_run.py", "sms-free", "solutions/reference/permissions_reference.json"], 0,
+           "مُنع · approval · خارج النطاق: template_id")
+    expect(["kit/agent_run.py", "sms-free"], 0, "نُفّذ · scoped")
+    # segregation of duties: the owner approving its own agent fails the test
+    spec = json.loads((LABS / "solutions/reference/permissions_reference.json").read_text(encoding="utf-8"))
+    spec["tools"]["send_sms_to_applicant"]["approver"] = "رئيس الخدمات الرقمية"
+    out = LABS / "out"
+    out.mkdir(exist_ok=True)
+    (out / "spec_owner.json").write_text(json.dumps(spec, ensure_ascii=False), encoding="utf-8")
+    expect(["kit/agent_test.py", "out/spec_owner.json"], 1, "هو مالك الوكيل")
+    print("lab 2.1: open spec 16 to fix; reference passes 10 allowed, 8 blocked")
+
+
+def lab_2_2() -> None:
+    key = json.loads((LABS / "solutions/reference/lab_2_2.json").read_text(encoding="utf-8"))
+    assert (key["requests_to_b_summarise"], key["requests_with_restricted"], key["requests_with_secret"],
+            key["distinct_applications"]) == (423, 419, 32, 80), key
+    expect(["kit/log_query.py", "--step", "summarise", "--route", "provider_b"], 0, "الطلبات: 423", "المختلفة في هذه المقاطع: 80")
+    expect(["kit/log_query.py", "--from", "2026-10-06T14:05", "--to", "2026-10-08T10:40", "--route", "provider_b"], 0, "الطلبات: 440")
+    expect(["kit/log_query.py", "--step", "summarise", "--route", "provider_b", "--level", "مقيد"], 0, "الطلبات: 419")
+    expect(["kit/log_query.py", "--step", "summarise", "--route", "provider_b", "--level", "سري"], 0, "الطلبات: 32")
+    expect(["kit/trace_check.py"], 1, "بلا إجابة")
+    expect(["kit/trace_check.py", "solutions/reference/trace_reference.xlsx"], 0, r"تطابق \(12\)", "RESULT: PASS")
+    expect(["kit/terms_check.py"], 1, "فارغة")
+    expect(["kit/terms_check.py", "solutions/reference/checklist_reference.xlsx"], 0, "16 من 16", "RESULT: PASS")
+    print("lab 2.2: 423 requests to B, 419 with Restricted, 32 with Secret, 80 applications; 440 if translation is counted")
+
+
+LABS_ALL = {"1.1": lab_1_1, "1.2": lab_1_2, "2.1": lab_2_1, "2.2": lab_2_2}
 
 
 def main() -> int:
