@@ -57,7 +57,20 @@ def lab_1_1() -> None:
 
 
 def lab_1_2() -> None:
-    t = expect(["kit/leak_test.py"], 1, r"قبل \(المرشّح الأساسي\): L1 48 · L2 17 · L3 28 · .*L4\) 237", "بقي 93 تسربًا")
+    t = expect(["kit/leak_test.py"], 1, r"قبل \(المرشّح الأساسي\): L1 48 · L2 17 · L3 28 · .*L4\) 237 .*الاسترجاع 0\.79 · المقاطع 450",
+               "بقي 93 تسربًا")
+    # the per-role table in solutions/D1_2_leaks.md
+    per_role: dict[str, dict[str, int]] = {}
+    for line in (LABS / "out" / "leak_log_before.jsonl").read_text(encoding="utf-8").splitlines():
+        r = json.loads(line)
+        d = per_role.setdefault(r["role"], {"L1": 0, "L2": 0, "L3": 0, "L4": 0})
+        if r["leak"]:
+            d[r["leak"]] += 1
+        if r["note"] == "L4":
+            d["L4"] += 1
+    assert per_role == {"front_desk": {"L1": 24, "L2": 10, "L3": 14, "L4": 79},
+                        "case_officer": {"L1": 24, "L2": 7, "L3": 14, "L4": 79},
+                        "committee": {"L1": 0, "L2": 0, "L3": 0, "L4": 79}}, per_role
     t = expect(["kit/leak_test.py", "solutions/reference/filter_reference.json"], 0,
                r"L1 0 · L2 0 · L3 0 · .*L4\) 0 .*الاسترجاع 0\.96", "RESULT: PASS")
     print([l for l in t.splitlines() if "بعد" in l][0].strip())
@@ -66,7 +79,7 @@ def lab_1_2() -> None:
     out = LABS / "out"
     out.mkdir(exist_ok=True)
     (out / "filter_post.json").write_text(json.dumps(post, ensure_ascii=False), encoding="utf-8")
-    t = expect(["kit/leak_test.py", "out/filter_post.json"], 1, "الاسترجاع")
+    t = expect(["kit/leak_test.py", "out/filter_post.json"], 1, r"بعد \(out/filter_post\.json\): L1 0 · L2 0 · L3 0 · .*L4\) 0 .*الاسترجاع 0\.76 · المقاطع 343")
     print("post-filter (stretch):", [l for l in t.splitlines() if "بعد" in l][0].strip())
     expect(["kit/pii_scan.py"], 0, "وُجدت معرّفات في 4")
     expect(["kit/label_errors_check.py"], 1, "فارغ")
@@ -101,6 +114,10 @@ def lab_2_2() -> None:
     expect(["kit/log_query.py", "--from", "2026-10-06T14:05", "--to", "2026-10-08T10:40", "--route", "provider_b"], 0, "الطلبات: 440")
     expect(["kit/log_query.py", "--step", "summarise", "--route", "provider_b", "--level", "مقيد"], 0, "الطلبات: 419")
     expect(["kit/log_query.py", "--step", "summarise", "--route", "provider_b", "--level", "سري"], 0, "الطلبات: 32")
+    # all 32 come from the committee role; 17 translation requests fall inside the window; 60 in the week
+    expect(["kit/log_query.py", "--step", "summarise", "--route", "provider_b", "--level", "سري", "--role", "committee"], 0, "الطلبات: 32")
+    expect(["kit/log_query.py", "--from", "2026-10-06T14:05", "--to", "2026-10-08T10:40", "--step", "translate"], 0, "الطلبات: 17")
+    expect(["kit/log_query.py", "--step", "translate"], 0, "الطلبات: 60")
     expect(["kit/trace_check.py"], 1, "بلا إجابة")
     expect(["kit/trace_check.py", "solutions/reference/trace_reference.xlsx"], 0, r"تطابق \(12\)", "RESULT: PASS")
     expect(["kit/terms_check.py"], 1, "فارغة")
