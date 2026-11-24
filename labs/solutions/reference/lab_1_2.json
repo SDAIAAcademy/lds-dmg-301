@@ -1,0 +1,40 @@
+{
+  "d1_missing_level": [
+    "DOC-030",
+    "DOC-040",
+    "DOC-048",
+    "DOC-062",
+    "DOC-072",
+    "DOC-076",
+    "DOC-081",
+    "DOC-105",
+    "DOC-149",
+    "DOC-155",
+    "DOC-158",
+    "DOC-170",
+    "DOC-264",
+    "DOC-265",
+    "DOC-286",
+    "DOC-288",
+    "DOC-292",
+    "DOC-293"
+  ],
+  "d2_missing_assignee": [
+    "DOC-001",
+    "DOC-004",
+    "DOC-005",
+    "DOC-006",
+    "DOC-008",
+    "DOC-009",
+    "DOC-014",
+    "DOC-015",
+    "DOC-035",
+    "DOC-039"
+  ],
+  "d3_public_with_identifiers": [
+    "DOC-067",
+    "DOC-084",
+    "DOC-252",
+    "DOC-289"
+  ]
+}

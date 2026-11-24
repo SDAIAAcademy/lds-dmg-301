@@ -1,0 +1,1505 @@
+{
+  "_about": "صلاحيات نظام المصدر لكل وثيقة ودور: ما يحق للدور رؤيته. يقرؤه اختبار التسرب ليقارن به.",
+  "acl": {
+    "DOC-001": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-002": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-003": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-004": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-005": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-006": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-007": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-008": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-009": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-010": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-011": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-012": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-013": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-014": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-015": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-016": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-017": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-018": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-019": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-020": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-021": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-022": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-023": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-024": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-025": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-026": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-027": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-028": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-029": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-030": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-031": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-032": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-033": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-034": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-035": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-036": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-037": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-038": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-039": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-040": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-041": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-042": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-043": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-044": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-045": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-046": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-047": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-048": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-049": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-050": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-051": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-052": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-053": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-054": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-055": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-056": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-057": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-058": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-059": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-060": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-061": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-062": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-063": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-064": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-065": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-066": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-067": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-068": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-069": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-070": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-071": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-072": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-073": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-074": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-075": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-076": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-077": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-078": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-079": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-080": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-081": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-082": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-083": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-084": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-085": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-086": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-087": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-088": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-089": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-090": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-091": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-092": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-093": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-094": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-095": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-096": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-097": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-098": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-099": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-100": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-101": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-102": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-103": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-104": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-105": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-106": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-107": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-108": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-109": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-110": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-111": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-112": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-113": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-114": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-115": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-116": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-117": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-118": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-119": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-120": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-121": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-122": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-123": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-124": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-125": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-126": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-127": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-128": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-129": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-130": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-131": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-132": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-133": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-134": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-135": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-136": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-137": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-138": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-139": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-140": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-141": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-142": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-143": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-144": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-145": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-146": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-147": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-148": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-149": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-150": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-151": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-152": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-153": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-154": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-155": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-156": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-157": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-158": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-159": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-160": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-161": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-162": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-163": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-164": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-165": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-166": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-167": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-168": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-169": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-170": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-171": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-172": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-173": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-174": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-175": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-176": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-177": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-178": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-179": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-180": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-181": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-182": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-183": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-184": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-185": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-186": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-187": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-188": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-189": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-190": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-191": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-192": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-193": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-194": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-195": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-196": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-197": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-198": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-199": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-200": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-201": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-202": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-203": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-204": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-205": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-206": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-207": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-208": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-209": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-210": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-211": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-212": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-213": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-214": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-215": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-216": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-217": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-218": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-219": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-220": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-221": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-222": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-223": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-224": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-225": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-226": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-227": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-228": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-229": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-230": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-231": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-232": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-233": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-234": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-235": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-236": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-237": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-238": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-239": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-240": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-241": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-242": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-243": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-244": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-245": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-246": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-247": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-248": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-249": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-250": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-251": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-252": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-253": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-254": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-255": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-256": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-257": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-258": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-259": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-260": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-261": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-262": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-263": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-264": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-265": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-266": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-267": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-268": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-269": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-270": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-271": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-272": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-273": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-274": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-275": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-276": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-277": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-278": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-279": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-280": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-281": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-282": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-283": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-284": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-285": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-286": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-287": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-288": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-289": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-290": {
+      "front_desk": false,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-291": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-292": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-293": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-294": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-295": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-296": {
+      "front_desk": false,
+      "case_officer": false,
+      "committee": true
+    },
+    "DOC-297": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-298": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-299": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    },
+    "DOC-300": {
+      "front_desk": true,
+      "case_officer": true,
+      "committee": true
+    }
+  }
+}

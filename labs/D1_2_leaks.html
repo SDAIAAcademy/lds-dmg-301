@@ -1,37 +1,77 @@
 <article class="lab" data-lab="1.2">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>سجلا اختبار التسرب قبل المرشّح وبعده: ثلاثون سؤالًا بثلاثة أدوار على مساعد البحث للموظفين فوق 300 وثيقة موسومة.</li>
+    <li>مرشّح وسوم في <code>filter.json</code> لا يترك تسربًا ولا يحجب ما يحق للأدوار رؤيته (استرجاع 0.90 فأكثر).</li>
+    <li>قائمة بأخطاء الوسم في المصدر لممثل البيانات، لأن المرشّح لا يصلحها.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="فهرس استرجاع مع مرشّحات للبيانات الوصفية">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/retrieval/filter.json"><b>retrieval/filter.json</b><span>مرشّح الوسوم كما يعمل اليوم: كل دور يرى كل شيء، والخطوة التوليدية تأخذ كل شيء.</span></a>
+  <a href="files/retrieval/roles.json"><b>retrieval/roles.json</b><span>الأدوار الثلاثة: موظف الاستقبال، وباحث الحالات K-03، وعضو لجنة المنح.</span></a>
+  <a href="files/retrieval/index_labels.xlsx" download><b>retrieval/index_labels.xlsx</b><span>وسوم كل مقطع في الفهرس: المستوى، وهل هو ملف طلب، والمسند إليه.</span></a>
+  <a href="files/retrieval/label_errors.xlsx" download><b>retrieval/label_errors.xlsx</b><span>ورقة أخطاء الوسم في المصدر التي تملؤها.</span></a>
+</div>
+<div class="callout note small"><b>ما الذي يعمل هنا.</b> البحث والمرشّح يعملان فعلًا على الوثائق الثلاثمئة. الخطوة التوليدية بديل مكتوب للمقرر: لا يُستدعى أي نموذج، وتسجل الأداة ما كان سيصل إليه. الذكاء الاصطناعي في هذا المختبر: مرشد يشرح، ولا يُلصق فيه شيء من الملفات.</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · شغّل الاختبار الأساسي واقرأ السجل <span class="min">15 د</span></h3>
+  <pre class="code"><code>uv run kit/leak_test.py
+uv run kit/assistant.py front_desk "اشتباه بتكرار الطلب وتطابق الجوال"</code></pre>
+  <p>الأداة تقارن كل مقطع أعاده المساعد بصلاحيات نظام المصدر، وتكتب السجل في <code>out/leak_log_before.jsonl</code>. اقرأ عشرة أسطر فيها <code>leak</code>: من الدور، وما المقطع، وما وسمه في الفهرس؟</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · صنّف كل تسرب بسببه <span class="min">15 د</span></h3>
+  <p>ثلاثة أسباب تطبعها الأداة: مستوى فوق حاجة الدور (L1)، وملف طلب لغير الباحث المسند إليه (L2)، ومقطع بلا وسم (L3). ورابع لا يخص الدور: مقطع غير عام يصل إلى الخطوة التوليدية (L4). لكل سبب، أي حقل في المرشّح يغلقه؟</p>
+</div>
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+<div class="step">
+  <h3>3 · اكتب مرشّح الوسوم <span class="min">20 د</span></h3>
+  <p>عدّل <code>files/retrieval/filter.json</code> في محرر نصوص: المستويات لكل دور، و<code>cases</code> لملفات الطلبات (<code>none</code> أو <code>assigned</code> أو <code>all</code>)، و<code>missing_label</code>، و<code>generation_levels</code>. احفظ الملف بترميز UTF-8.</p>
+</div>
+
+<div class="step">
+  <h3>4 · أعد الاختبار حتى لا يبقى تسرب ويُحفظ الاسترجاع <span class="min">20 د</span></h3>
+  <pre class="code"><code>uv run kit/leak_test.py</code></pre>
+  <p>النجاح: لا تسرب، ولا مقطع غير عام في الخطوة التوليدية، واسترجاع 0.90 فأكثر. مرشّح يحجب كل شيء لا ينجح.</p>
+</div>
+
+<div class="step">
+  <h3>5 · سجّل أخطاء الوسم في المصدر لممثل البيانات <span class="min">10 د</span></h3>
+  <p>ثلاثة أنواع لا يصلحها المرشّح: مقاطع بلا مستوى، وملفات طلبات بلا مسند إليه (ابحث عنها في <code>index_labels.xlsx</code>)، ووثائق «عام» فيها معرّفات متقدم:</p>
+  <pre class="code"><code>uv run kit/pii_scan.py
+uv run kit/label_errors_check.py</code></pre>
+</div>
+
+<div class="step">
+  <h3>6 · اكتب ملاحظة قبل وبعد <span class="min">10 د</span></h3>
+  <p>خمسة أسطر لمالك المساعد: عدد التسرب قبل وبعد بأسبابه، والاسترجاع، وما يبقى على ممثل البيانات، ومتى يُعاد الاختبار.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>انسخ مرشّحك إلى ملف آخر، واجعل <code>mode</code> فيه <code>post</code> (الترشيح بعد الاسترجاع)، وشغّل <code>uv run kit/leak_test.py</code> مع اسم الملف. كم مقطعًا يصل إلى الأدوار الآن، ولماذا؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>أي سبب من أسباب التسرب أغلقه حقل <code>missing_label</code>، وما ثمن ذلك على عضو اللجنة حتى يُعاد الوسم؟</li>
+  <li>لماذا لا يستطيع المرشّح منع وثيقة «عام» فيها معرّفات متقدم؟</li>
+  <li>ما الذي يصل إلى الخطوة التوليدية في مرشّحك، ولماذا؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>المرجع: <code>solutions/D1_2_leaks.md</code> و<code>solutions/reference/filter_reference.json</code>. <code>uv run solutions/check.py 1.2</code> يتحقق من الأرقام.</li>
+    <li>الأخطاء المعتادة: <code>cases: none</code> للباحث فيسقط الاسترجاع؛ ترك <code>missing_label: allow</code> لأن عضو اللجنة «يحق له السري»، والمقطع بلا وسم لا يُعرف مستواه؛ نسيان <code>generation_levels</code>.</li>
+    <li>من يحذف الوثائق المكشوفة من الفهرس بدل تسجيلها لممثل البيانات يعالج العَرَض: الخطأ في المصدر، وسيعود مع إعادة الفهرسة.</li>
+  </ul>
+</details>
 </article>

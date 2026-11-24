@@ -1,0 +1,32 @@
+{
+  "_help": "مرشّح الوسوم. لكل دور: levels المستويات التي يراها، وcases: none أو assigned أو all لملفات الطلبات. missing_label: allow أو deny. generation_levels: ما يصل إلى الخطوة التوليدية. mode: pre أو post.",
+  "mode": "pre",
+  "missing_label": "deny",
+  "roles": {
+    "front_desk": {
+      "levels": [
+        "عام",
+        "مقيد"
+      ],
+      "cases": "none"
+    },
+    "case_officer": {
+      "levels": [
+        "عام",
+        "مقيد"
+      ],
+      "cases": "assigned"
+    },
+    "committee": {
+      "levels": [
+        "عام",
+        "مقيد",
+        "سري"
+      ],
+      "cases": "all"
+    }
+  },
+  "generation_levels": [
+    "عام"
+  ]
+}
