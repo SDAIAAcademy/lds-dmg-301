@@ -1,0 +1,11 @@
+[project]
+name = "lds-dmg-301-labs"
+version = "2027.1.0"
+description = "Lab kit of the SDAIA Academy course LDS-DMG-301"
+requires-python = ">=3.11"
+dependencies = [
+  "openpyxl>=3.1",
+]
+
+[tool.uv]
+package = false

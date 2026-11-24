@@ -1,0 +1,31 @@
+# حوكمة البيانات للذكاء الاصطناعي: التدريب والاسترجاع ووصول الوكلاء
+
+> تقرر ما يجوز للذكاء الاصطناعي أن يتدرب عليه ويسترجعه ويصل إليه ويرسله، ثم تختبر القرار على مساعد ووكيل وسجلات، وتدافع عنه أمام لجنة. مقرر من أكاديمية سدايا، الرمز LDS-DMG-301، الإصدار 2027.1.0، بالعربية.
+
+كل شريحة عنوان مثل "#### [day1#slide-id] العنوان": استشهد بالشرائح بهذا المعرّف، وكل استشهاد رابط (slides/day1.html#slide-id). هذه الملفات هي ما يراه المشارك: لا ملاحظات المدرّب فيها ولا مفاتيح الإجابة.
+
+## المقرر
+
+- [صفحة المقرر](https://sdaiaacademy.github.io/lds-dmg-301/index.md): نظرة عامة ونواتج التعلم والجدول والمختبرات؛ الصفحة نفسها https://sdaiaacademy.github.io/lds-dmg-301/index.html
+- [المقرر كاملًا](https://sdaiaacademy.github.io/lds-dmg-301/llms-full.txt): كل وحدة وجلسة وشريحة في ملف واحد، نحو 11,788 من الوحدات النصية
+- [أسئلة التدريب](https://sdaiaacademy.github.io/lds-dmg-301/practice.html): أسئلة تختبر بها نفسك، مع تعليل بعد كل إجابة
+
+## الشرائح
+
+- [اليوم 1: من الطلب إلى الفهرس](https://sdaiaacademy.github.io/lds-dmg-301/slides/day1.md): جلستان: أهلية البيانات لكل استخدام، ثم وسوم التصنيف حين يسترجع المساعد؛ ثم الاختبار المراقب دون ذكاء اصطناعي؛ الجلسات: ما الذي يجوز أن يأخذه الذكاء الاصطناعي، الوسوم تسافر إلى الإجابة؛ الصفحة: https://sdaiaacademy.github.io/lds-dmg-301/slides/day1.html؛ نحو 5,659 من الوحدات النصية
+- [اليوم 2: الوكلاء والمزوّدون والأدلة](https://sdaiaacademy.github.io/lds-dmg-301/slides/day2.md): جلستان: صلاحيات الوكيل لكل أداة، ثم شروط المزوّد الخارجي والسجلات؛ ثم الدفاع أمام اللجنة؛ الجلسات: أقل الصلاحيات لكل أداة، المزوّد الخارجي والسجل الذي يبقى؛ الصفحة: https://sdaiaacademy.github.io/lds-dmg-301/slides/day2.html؛ نحو 4,448 من الوحدات النصية
+- [المشروع الختامي: وكيل الرد على المواطنين أمام اللجنة](https://sdaiaacademy.github.io/lds-dmg-301/slides/capstone.md): كل فريق يعرض معياره وسجل قراره في ثماني دقائق، ثم سبع دقائق لأسئلة اللجنة وتغيير حقيقة واحدة أمامها؛ الصفحة: https://sdaiaacademy.github.io/lds-dmg-301/slides/capstone.html؛ نحو 1,049 من الوحدات النصية
+
+## المختبرات
+
+- [المختبر 1.1: الحكم على اثني عشر طلبًا](https://sdaiaacademy.github.io/lds-dmg-301/labs/D1_1_eligibility.md): اليوم 1، الجلسة 1، 90 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-dmg-301/labs/D1_1_eligibility.html
+- [المختبر 1.2: كشف تسرب الصلاحيات وسدّه](https://sdaiaacademy.github.io/lds-dmg-301/labs/D1_2_leaks.md): اليوم 1، الجلسة 2، 90 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-dmg-301/labs/D1_2_leaks.html
+- [المختبر 2.1: تحديد وصول وكيل واختباره](https://sdaiaacademy.github.io/lds-dmg-301/labs/D2_1_agent.md): اليوم 2، الجلسة 1، 90 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-dmg-301/labs/D2_1_agent.html
+- [المختبر 2.2: تتبع حادثة في السجلات](https://sdaiaacademy.github.io/lds-dmg-301/labs/D2_2_incident.md): اليوم 2، الجلسة 2، 90 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-dmg-301/labs/D2_2_incident.html
+
+## ملفات السياق
+
+- [context/course.md](https://sdaiaacademy.github.io/lds-dmg-301/context/course.md): المقرر كاملًا، لمساعد يقبل ملفًا مرفقًا، نحو 11,788 من الوحدات النصية
+- [context/day1.md](https://sdaiaacademy.github.io/lds-dmg-301/context/day1.md): اليوم 1، نحو 5,659 من الوحدات النصية
+- [context/day2.md](https://sdaiaacademy.github.io/lds-dmg-301/context/day2.md): اليوم 2، نحو 4,448 من الوحدات النصية
+- [context/capstone.md](https://sdaiaacademy.github.io/lds-dmg-301/context/capstone.md): المشروع الختامي، نحو 1,049 من الوحدات النصية

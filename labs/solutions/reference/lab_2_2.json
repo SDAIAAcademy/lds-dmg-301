@@ -1,0 +1,15 @@
+{
+  "change_id": "CH-0412",
+  "rollback_id": "CH-0419",
+  "window_start": "2026-10-06T14:05:00",
+  "window_end": "2026-10-08T10:40:00",
+  "requests_to_b_summarise": 423,
+  "requests_with_restricted": 419,
+  "requests_with_secret": 32,
+  "distinct_applications": 80,
+  "highest_class_sent": "سري",
+  "requested_by": "مهندس منصة النماذج",
+  "approved_by": "مدير التغيير",
+  "log_class": "سري",
+  "translate_requests_b": 60
+}

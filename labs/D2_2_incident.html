@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · تتبع حادثة في السجلات · حوكمة البيانات للذكاء الاصطناعي: التدريب والاسترجاع ووصول الوكلاء</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_incident.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>تتبع حادثة في السجلات</h1>
+<p>تتتبع في سجلات أسبوع من بوابة النماذج كيف أرسل تغيير في الإعداد مقاطع مقيدة وسرية إلى خدمة نماذج خارجية: النافذة والطلبات والفئات والطلبات المتأثرة ومن طلب التغيير ومن اعتمده، ثم تراجع شروط المزوّدَين بقائمة تحقق وتكتب مذكرة قرار.</p>
+<div class="meta"><span>90 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: المزوّد الخارجي والسجل الذي يبقى</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>تتبع للحادثة في ورقة <code>trace.xlsx</code>: التغيير الذي فتح النافذة والذي أغلقها، ووقتهما، وعدد الطلبات التي خرجت، وفئاتها، وأرقام الطلبات المتأثرة، ومن طلب التغيير ومن اعتمده، ومستوى السجلات.</li>
+    <li>قائمة تحقق لشروط المزوّدَين أ وب في ثمانية بنود، وقرار لكل مستوى تصنيف ولكل مزوّد واستخدام.</li>
+    <li>مذكرة قرار في صفحة لمسؤول حماية البيانات.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/incident/incident_note.md"><b>incident/incident_note.md</b><span>البلاغ: ما لوحظ، وما يُطلب منك.</span></a>
+  <a href="files/incident/changes.xlsx" download><b>incident/changes.xlsx</b><span>سجل التغييرات في إعداد بوابة النماذج.</span></a>
+  <a href="files/incident/requests.xlsx" download><b>incident/requests.xlsx</b><span>سجل الطلبات لأسبوع: الوقت، والدور، والخطوة، والمسار، والمقاطع.</span></a>
+  <a href="files/incident/retrieval.xlsx" download><b>incident/retrieval.xlsx</b><span>سجل الاسترجاع: الوثيقة، ومستواها في المصدر، ورقم الطلب، وهل أُرسلت.</span></a>
+  <a href="files/incident/provider_a_terms.md"><b>incident/provider_a_terms.md</b><span>شروط المزوّد أ، سحابة داخل المملكة.</span></a>
+  <a href="files/incident/provider_b_terms.md"><b>incident/provider_b_terms.md</b><span>شروط المزوّد ب، خدمة نماذج خارج المملكة.</span></a>
+  <a href="files/incident/trace.xlsx" download><b>incident/trace.xlsx</b><span>ورقة التتبع التي تملؤها.</span></a>
+  <a href="files/incident/checklist.xlsx" download><b>incident/checklist.xlsx</b><span>قائمة التحقق وورقة القرار التي تملؤهما.</span></a>
+</div>
+<div class="callout note small"><b>ما الذي يعمل هنا.</b> السجلات اصطناعية لأسبوع من بوابة النماذج، ولا يُستدعى أي نموذج. الذكاء الاصطناعي في هذا المختبر: مرشد يشرح مفهومًا، مثل الاحتفاظ أو المعالج من الباطن، ولا يُلصق فيه شيء من السجلات ولا من الشروط.</div>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ بلاغ الحادثة وسجل التغييرات <span class="min">10 د</span></h3>
+  <p>اقرأ البلاغ، ثم افتح <code>changes.xlsx</code>. لكل تغيير: ما الفرق في الإعداد، لا ما يقوله وصفه فقط. أي تغيير غيّر مسار خطوة التلخيص؟ وأيها أرجعه؟ وأي تغيير يذكر المزوّد ب ولا علاقة له بالحادثة؟</p>
+</div>
+
+<div class="step">
+  <h3>2 · حدد النافذة والطلبات التي خرجت <span class="min">20 د</span></h3>
+  <p>في <code>requests.xlsx</code> رشّح بالخطوة والمسار والوقت. أو عدّها من مجلد <code>labs</code>:</p>
+  <pre class="code"><code>uv run kit/log_query.py --from 2026-10-04T07:00 --to 2026-10-05T07:00 --route local</code></pre>
+  <p>المثال يعدّ طلبات اليوم الأول المحلية؛ اختر أنت المرشحات التي تجيب عن سؤال البلاغ. انتبه: ليست كل الطلبات إلى المزوّد ب من الحادثة.</p>
+</div>
+
+<div class="step">
+  <h3>3 · عدّ الفئات والطلبات المتأثرة <span class="min">15 د</span></h3>
+  <p>كم طلبًا حمل مقطعًا «مقيد» واحدًا على الأقل، وكم حمل «سري»؟ (<code>--level</code>). كم رقم طلب مختلف خرجت مقاطعه؟ ثم احكم على سجلات الأوامر لهذه النافذة: ما مستواها؟ املأ <code>trace.xlsx</code> وشغّل:</p>
+  <pre class="code"><code>uv run kit/trace_check.py</code></pre>
+</div>
+
+<div class="step">
+  <h3>4 · املأ قائمة التحقق لشروط المزوّدَين <span class="min">20 د</span></h3>
+  <p>لكل بند من الثمانية في <code>checklist.xlsx</code>: رقم البند في كل شروط (مثل أ-3)، وهل هو مقبول لدى الأمانة: <code>نعم</code> أو <code>لا</code> أو <code>بشرط</code>. ثم في ورقة «القرار»: لكل مستوى تصنيف ولكل مزوّد، الحكم لنموذج توليدي ولخدمة غير توليدية. ارجع إلى قواعد الأمانة في <code>files/eligibility/rules.md</code>.</p>
+</div>
+
+<div class="step">
+  <h3>5 · اكتب مذكرة القرار <span class="min">15 د</span></h3>
+  <p>صفحة لمسؤول حماية البيانات: ما الذي خرج ومتى وكيف، وما الذي يجوز إرساله إلى كل مزوّد ولأي استخدام، وما الذي يتغير في إجراءات التغيير حتى لا يمر تغيير كهذا دون مكتب إدارة البيانات.</p>
+</div>
+
+<div class="step">
+  <h3>6 · شغّل الفحصين وأصلح <span class="min">10 د</span></h3>
+  <pre class="code"><code>uv run kit/trace_check.py
+uv run kit/terms_check.py</code></pre>
+  <p>الفحص الأول يذكر البنود التي لا تطابق بعد، لا قيمها. الثاني يطبع الأعداد فقط، ويتوقف عند أي قرار يرسل غير العام إلى المزوّد ب.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>اكتب مدخل سجل استخدامات البيانات في الذكاء الاصطناعي لخطوة التلخيص كما يجب أن يكون بعد الحادثة: الاستخدام، والمستويات، والمسار، والمزوّد، والسجلات ومستواها واحتفاظها، والمعتمِد، ومتى يُراجع.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>لماذا لا يكفي أن تبحث عن «المزوّد ب» في سجل الطلبات لتعرف ما خرج في الحادثة؟</li>
+  <li>من اعتمد التغيير، وما الذي كان ينقص الاعتماد حتى يكتشف أن الطلب يوسّع المستويات؟</li>
+  <li>أي بندين في شروط المزوّد ب يكفي كل منهما وحده لمنع إرسال بيانات شخصية إليه؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>المرجع: <code>solutions/D2_2_incident.md</code> و<code>solutions/reference/trace_reference.xlsx</code> و<code>checklist_reference.xlsx</code>. <code>uv run solutions/check.py 2.2</code> يتحقق منها.</li>
+    <li>الأخطاء المعتادة في المرجع. حين يتعثر مشارك، اسأله: «ما الذي غيّره التغيير بالضبط؟» و«ما أعلى ما في هذه السجلات؟».</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_1_agent.html" rel="prev">→ المختبر السابق</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · حوكمة البيانات للذكاء الاصطناعي: التدريب والاسترجاع ووصول الوكلاء<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-24⁩ · الإيداع 472d5bb</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-24T22:38:11Z","version":"2027.1.0","commit":"472d5bb"},"course":{"id":"lds-dmg-301","code":"LDS-DMG-301","title":"حوكمة البيانات للذكاء الاصطناعي: التدريب والاسترجاع ووصول الوكلاء","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-dmg-301/","repo":"SDAIAAcademy/lds-dmg-301","home":"../index.html"},"lab":{"id":"2.2","title":"تتبع حادثة في السجلات","summary":"تتتبع في سجلات أسبوع من بوابة النماذج كيف أرسل تغيير في الإعداد مقاطع مقيدة وسرية إلى خدمة نماذج خارجية: النافذة والطلبات والفئات والطلبات المتأثرة ومن طلب التغيير ومن اعتمده، ثم تراجع شروط المزوّدَين بقائمة تحقق وتكتب مذكرة قرار.","minutes":90,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_agent.html","next":null,"alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

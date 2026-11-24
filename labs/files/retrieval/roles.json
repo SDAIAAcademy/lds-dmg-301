@@ -1,0 +1,14 @@
+{
+  "front_desk": {
+    "name": "موظف الاستقبال",
+    "officer": ""
+  },
+  "case_officer": {
+    "name": "باحث الحالات K-03",
+    "officer": "K-03"
+  },
+  "committee": {
+    "name": "عضو لجنة المنح",
+    "officer": ""
+  }
+}

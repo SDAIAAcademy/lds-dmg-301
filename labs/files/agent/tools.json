@@ -1,0 +1,103 @@
+{
+  "_about": "كتالوج أدوات الوكيل في خادمَي الأدوات. kind: read أو write كما يعلنه الخادم، وهو وصف لا ضمان.",
+  "tools": [
+    {
+      "name": "search_applications",
+      "server": "ملفات الطلبات",
+      "kind": "read",
+      "description": "يبحث في الطلبات بالحالة والحي ويعيد سجلاتها",
+      "args": [
+        "status",
+        "district"
+      ]
+    },
+    {
+      "name": "get_application_summary",
+      "server": "ملفات الطلبات",
+      "kind": "read",
+      "description": "يعيد ملخص طلب واحد بمعرّفه المرجعي (handle)",
+      "args": [
+        "handle"
+      ]
+    },
+    {
+      "name": "get_application_documents",
+      "server": "ملفات الطلبات",
+      "kind": "read",
+      "description": "يعيد نصوص المستندات الممسوحة للطلب: الهوية والصك وسجل الأسرة",
+      "args": [
+        "handle"
+      ]
+    },
+    {
+      "name": "update_status",
+      "server": "ملفات الطلبات",
+      "kind": "write",
+      "description": "يغيّر حالة الطلب",
+      "args": [
+        "handle",
+        "status"
+      ]
+    },
+    {
+      "name": "add_note",
+      "server": "ملفات الطلبات",
+      "kind": "write",
+      "description": "يضيف ملاحظة نصية حرة إلى ملف الطلب",
+      "args": [
+        "handle",
+        "text"
+      ]
+    },
+    {
+      "name": "list_inspector_slots",
+      "server": "المواعيد والمراسلة",
+      "kind": "read",
+      "description": "يعيد مواعيد المفتشين المتاحة في حي وأسبوع، مع رسائل المقاولين",
+      "args": [
+        "district",
+        "week"
+      ]
+    },
+    {
+      "name": "book_inspection",
+      "server": "المواعيد والمراسلة",
+      "kind": "write",
+      "description": "يحجز موعد كشف لطلب",
+      "args": [
+        "handle",
+        "slot_id"
+      ]
+    },
+    {
+      "name": "send_sms_to_applicant",
+      "server": "المواعيد والمراسلة",
+      "kind": "write",
+      "description": "يرسل رسالة نصية إلى المتقدم بقالب؛ الخادم يملأ رقم الجوال من ملف الطلب",
+      "args": [
+        "handle",
+        "template_id"
+      ]
+    },
+    {
+      "name": "send_email",
+      "server": "المواعيد والمراسلة",
+      "kind": "write",
+      "description": "يرسل بريدًا إلى أي عنوان مع مرفق",
+      "args": [
+        "to",
+        "body",
+        "attachment"
+      ]
+    },
+    {
+      "name": "export_applications_csv",
+      "server": "ملفات الطلبات",
+      "kind": "write",
+      "description": "يصدّر الطلبات المطابقة إلى ملف في المجلد المشترك",
+      "args": [
+        "status"
+      ]
+    }
+  ]
+}

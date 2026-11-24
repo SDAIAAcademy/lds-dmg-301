@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · تحديد وصول وكيل واختباره · حوكمة البيانات للذكاء الاصطناعي: التدريب والاسترجاع ووصول الوكلاء</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_1_agent.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>تحديد وصول وكيل واختباره</h1>
+<p>تكتب مواصفة الصلاحيات لوكيل جدولة الكشف الميداني المتصل بخادمَي أدوات (ملفات الطلبات، والمواعيد والمراسلة)، وتشغّل الاختبار المبرمج على اثنتي عشرة مهمة حتى ينجح: لا أداة ممنوعة تعمل، ولا حقل شخصي يصل إلى النموذج، ولا كتابة دون موافقة من غير مالك الوكيل.</p>
+<div class="meta"><span>90 دقيقة</span><span>اليوم 2</span><span>الجلسة 1: أقل الصلاحيات لكل أداة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>مواصفة صلاحيات في <code>permissions.json</code> لوكيل جدولة الكشف الميداني المتصل بخادمَي أدوات: لكل أداة من العشر نمطها، والحقول التي تصل منها إلى النموذج، ونطاقها، ومن يوافق.</li>
+    <li>اختبار مبرمج ناجح على اثنتي عشرة مهمة: ما تحتاجه المهام يُنفّذ، وما يجب أن يُمنع يُمنع، ولا حقل شخصي يصل إلى النموذج، ولا كتابة دون موافقة من غير مالك الوكيل.</li>
+    <li>صفحة مبررات: لماذا اخترت لكل أداة نمطها.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/agent/tools.json"><b>agent/tools.json</b><span>كتالوج الأدوات العشر في الخادمين: ملفات الطلبات، والمواعيد والمراسلة.</span></a>
+  <a href="files/agent/tasks.json"><b>agent/tasks.json</b><span>المهام الاثنتا عشرة التي يشغّلها الاختبار، وما يُتوقع من كل خطوة.</span></a>
+  <a href="files/agent/roles.json"><b>agent/roles.json</b><span>مالك الوكيل، والأدوار التي يجوز أن توافق، وقالبا الرسائل، وحقول «عرض الطابور».</span></a>
+  <a href="files/agent/permissions.json"><b>agent/permissions.json</b><span>المواصفة التي تعدّلها. تبدأ مفتوحة: كل أداة متاحة بكل حقولها.</span></a>
+</div>
+<div class="callout note small"><b>ما الذي يعمل هنا.</b> الخادمان وبوابة الصلاحيات يعملان فعلًا على ملفات اصطناعية. النموذج بديل مكتوب للمقرر: ينفذ ما يُطلب منه وما تقوله مخرجات الأدوات، ولا يرفض من تلقاء نفسه، فكل ما يُمنع تمنعه مواصفتك. لا يُستدعى أي نموذج. الذكاء الاصطناعي في هذا المختبر: مرشد يشرح، ولا يُلصق فيه شيء من الملفات.</div>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ كتالوج الأدوات والمهام <span class="min">10 د</span></h3>
+  <p>في <code>tools.json</code>: أي أداة تقرأ وأيها تكتب، وما وسائطها. في <code>tasks.json</code>: لكل مهمة خطوات، بعضها يجب أن ينجح (<code>allow</code>) وبعضها يجب أن يُمنع (<code>block</code>). لاحظ أن ما يعلنه الخادم عن أداته («تقرأ» أو «تكتب») وصف، لا ضمان.</p>
+</div>
+
+<div class="step">
+  <h3>2 · شغّل الوكيل بالمواصفة المفتوحة واقرأ سجله <span class="min">15 د</span></h3>
+  <pre class="code"><code>uv run kit/agent_run.py
+uv run kit/agent_test.py</code></pre>
+  <p>اقرأ أثر المهمة T07 سطرًا سطرًا: ما الذي وصل إلى النموذج من أداة المواعيد، وماذا فعل بعده؟ ثم اقرأ T10: ماذا رأى النموذج حين سُئل عن جوال متقدم؟</p>
+</div>
+
+<div class="step">
+  <h3>3 · حدد أنماط أدوات ملفات الطلبات وحقولها <span class="min">20 د</span></h3>
+  <p>لكل أداة في هذا الخادم اختر <code>mode</code>: <code>denied</code> أو <code>read_only</code> أو <code>scoped</code> أو <code>approval</code>. ثم <code>fields</code>: الحقول التي تصل إلى النموذج (القائمة الفارغة تعني كل الحقول)، و<code>scope</code>: القيم المسموحة لوسائطها أو لحالة الطلب الذي تعمل عليه. ابدأ من سؤال: ما الذي تحتاجه جدولة الكشف فعلًا؟</p>
+</div>
+
+<div class="step">
+  <h3>4 · حدد أنماط أدوات المواعيد والمراسلة ومن يوافق <span class="min">20 د</span></h3>
+  <p>الرسائل إلى المتقدمين وتغيير الحالة كتابة تصل إلى الناس وإلى ملفاتهم. لكل أداة كتابة: هل تُمنع، أم تُحدد بنطاق، أم تمر بموافقة؟ ومن الموافق (<code>approver</code>) من الأدوار في <code>roles.json</code>؟</p>
+</div>
+
+<div class="step">
+  <h3>5 · شغّل الاختبار المبرمج حتى ينجح <span class="min">15 د</span></h3>
+  <pre class="code"><code>uv run kit/agent_test.py</code></pre>
+  <p>النجاح: الخطوات العشر التي تحتاجها المهام تُنفّذ، والخطوات الثماني الممنوعة تُمنع، ولا حقل شخصي ولا تعليمة من مخرجات أداة تصل إلى النموذج، والموافقات عند غير مالك الوكيل. مواصفة تمنع كل شيء لا تنجح.</p>
+</div>
+
+<div class="step">
+  <h3>6 · اكتب مبررات المواصفة في صفحة <span class="min">10 د</span></h3>
+  <p>لكل أداة سطر: نمطها، ولماذا، وما الذي يحدث لو كان أوسع. ثم سطران عن الموافقة: من يوافق على ماذا، ولماذا ليس مالك الوكيل.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>يطلب موظف من الوكيل أن يرسل إلى متقدم رسالة بنص يكتبه هو، لا بقالب. شغّل <code>uv run kit/agent_run.py sms-free</code>: هل منعتها مواصفتك؟ أي حقل فيها منعها، ولماذا تبقى القوالب أضيق من النص الحر حتى مع الموافقة؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>في T07 لم يطلب أحد من الوكيل إرسال بريد. من أين جاءت التعليمة، وأي حقلين في مواصفتك يمنعانها؟</li>
+  <li>لماذا يكفي المعرّف المرجعي (<code>handle</code>) ليعمل الوكيل، دون رقم الهوية والجوال؟</li>
+  <li>لماذا لا يكون مالك الوكيل هو من يوافق على رسائله؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>المرجع: <code>solutions/D2_1_agent.md</code> و<code>solutions/reference/permissions_reference.json</code>. <code>uv run solutions/check.py 2.1</code> يتحقق منهما.</li>
+    <li>الأخطاء المعتادة في المرجع. حين يتعثر مشارك، اسأله لكل أداة: «هل تحتاجها الجدولة؟ وأي حقل منها؟ ومن يوافق؟».</li>
+    <li>الاختبار يفحص ما يراه النموذج وما يستطيع فعله معًا: من يصلح أحدهما وحده لا ينجح.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_2_leaks.html" rel="prev">→ المختبر السابق</a><a href="D2_2_incident.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · حوكمة البيانات للذكاء الاصطناعي: التدريب والاسترجاع ووصول الوكلاء<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-24⁩ · الإيداع 472d5bb</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-24T22:38:11Z","version":"2027.1.0","commit":"472d5bb"},"course":{"id":"lds-dmg-301","code":"LDS-DMG-301","title":"حوكمة البيانات للذكاء الاصطناعي: التدريب والاسترجاع ووصول الوكلاء","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-dmg-301/","repo":"SDAIAAcademy/lds-dmg-301","home":"../index.html"},"lab":{"id":"2.1","title":"تحديد وصول وكيل واختباره","summary":"تكتب مواصفة الصلاحيات لوكيل جدولة الكشف الميداني المتصل بخادمَي أدوات (ملفات الطلبات، والمواعيد والمراسلة)، وتشغّل الاختبار المبرمج على اثنتي عشرة مهمة حتى ينجح: لا أداة ممنوعة تعمل، ولا حقل شخصي يصل إلى النموذج، ولا كتابة دون موافقة من غير مالك الوكيل.","minutes":90,"day":2,"unit":"اليوم 2","session":1,"deck":"../slides/day2.html#lab-2-1","prev":"D1_2_leaks.html","next":"D2_2_incident.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

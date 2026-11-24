@@ -1,0 +1,509 @@
+{
+  "v": 1,
+  "engine": "1.0.0",
+  "build": {
+    "at": "2026-11-24T22:38:11Z",
+    "version": "2027.1.0",
+    "commit": "472d5bb"
+  },
+  "lang": "ar",
+  "dir": "rtl",
+  "totals": {
+    "decks": 3,
+    "slides": 70,
+    "words": 4524,
+    "notes": 65,
+    "notes_ratio": 0.93,
+    "activities": 5,
+    "styles": 0,
+    "slide_minutes": null,
+    "components": {
+      "cards": 50,
+      "pills": 0,
+      "callouts": 33,
+      "tables": 14,
+      "code": 1,
+      "tokens": 0,
+      "flows": 4,
+      "stats": 0,
+      "bars": 0,
+      "meters": 0,
+      "agendas": 3,
+      "quizzes": 5,
+      "checklists": 4,
+      "prompts": 0,
+      "chats": 0,
+      "tools": 0,
+      "traces": 3,
+      "ladders": 0,
+      "figures": 0,
+      "matrices": 0,
+      "timers": 3,
+      "columns": 27,
+      "images": 0,
+      "drawings": 0,
+      "fragments": 19
+    },
+    "minutes": 660
+  },
+  "decks": [
+    {
+      "deck": "day1",
+      "kind": "day",
+      "label": "اليوم 1",
+      "title": "من الطلب إلى الفهرس",
+      "slides": 33,
+      "words": 2347,
+      "notes": 31,
+      "notes_ratio": 0.94,
+      "activities": 2,
+      "styles": 0,
+      "slide_minutes": null,
+      "components": {
+        "cards": 28,
+        "pills": 0,
+        "callouts": 18,
+        "tables": 7,
+        "code": 1,
+        "tokens": 0,
+        "flows": 3,
+        "stats": 0,
+        "bars": 0,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 2,
+        "checklists": 2,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 1,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 0,
+        "columns": 14,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 12
+      },
+      "minutes": 330,
+      "sessions": [
+        {
+          "n": 1,
+          "label": "الجلسة 1",
+          "title": "ما الذي يجوز أن يأخذه الذكاء الاصطناعي",
+          "slides": 14,
+          "words": 1112,
+          "notes": 13,
+          "notes_ratio": 0.93,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 14,
+            "pills": 0,
+            "callouts": 8,
+            "tables": 5,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 6,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 7
+          },
+          "minutes": 165,
+          "lab_minutes": 90
+        },
+        {
+          "n": 2,
+          "label": "الجلسة 2",
+          "title": "الوسوم تسافر إلى الإجابة",
+          "slides": 16,
+          "words": 1062,
+          "notes": 15,
+          "notes_ratio": 0.94,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 13,
+            "pills": 0,
+            "callouts": 10,
+            "tables": 2,
+            "code": 0,
+            "tokens": 0,
+            "flows": 2,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 1,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 7,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 5
+          },
+          "minutes": 165,
+          "lab_minutes": 90
+        }
+      ]
+    },
+    {
+      "deck": "day2",
+      "kind": "day",
+      "label": "اليوم 2",
+      "title": "الوكلاء والمزوّدون والأدلة",
+      "slides": 27,
+      "words": 1834,
+      "notes": 25,
+      "notes_ratio": 0.93,
+      "activities": 3,
+      "styles": 0,
+      "slide_minutes": null,
+      "components": {
+        "cards": 16,
+        "pills": 0,
+        "callouts": 13,
+        "tables": 5,
+        "code": 0,
+        "tokens": 0,
+        "flows": 1,
+        "stats": 0,
+        "bars": 0,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 3,
+        "checklists": 2,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 2,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 0,
+        "columns": 11,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 7
+      },
+      "minutes": 330,
+      "sessions": [
+        {
+          "n": 1,
+          "label": "الجلسة 1",
+          "title": "أقل الصلاحيات لكل أداة",
+          "slides": 11,
+          "words": 779,
+          "notes": 10,
+          "notes_ratio": 0.91,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 7,
+            "pills": 0,
+            "callouts": 7,
+            "tables": 2,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 1,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 5,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 7
+          },
+          "minutes": 165,
+          "lab_minutes": 90
+        },
+        {
+          "n": 2,
+          "label": "الجلسة 2",
+          "title": "المزوّد الخارجي والسجل الذي يبقى",
+          "slides": 13,
+          "words": 897,
+          "notes": 12,
+          "notes_ratio": 0.92,
+          "activities": 2,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 6,
+            "pills": 0,
+            "callouts": 5,
+            "tables": 3,
+            "code": 0,
+            "tokens": 0,
+            "flows": 0,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 2,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 1,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 5,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 0
+          },
+          "minutes": 165,
+          "lab_minutes": 90
+        }
+      ]
+    },
+    {
+      "deck": "capstone",
+      "kind": "capstone",
+      "label": "المشروع الختامي",
+      "title": "وكيل الرد على المواطنين أمام اللجنة",
+      "slides": 10,
+      "words": 343,
+      "notes": 9,
+      "notes_ratio": 0.9,
+      "activities": 0,
+      "styles": 0,
+      "slide_minutes": null,
+      "components": {
+        "cards": 6,
+        "pills": 0,
+        "callouts": 2,
+        "tables": 2,
+        "code": 0,
+        "tokens": 0,
+        "flows": 0,
+        "stats": 0,
+        "bars": 0,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 0,
+        "checklists": 0,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 0,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 3,
+        "columns": 2,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 0
+      },
+      "minutes": null,
+      "sessions": []
+    }
+  ],
+  "coverage": [
+    {
+      "id": "LO1",
+      "text": "يصنف الاستخدامات المقترحة للبيانات في الذكاء الاصطناعي، بحسب فئة البيانات والغرض والاستضافة، إلى مسموح أو مشروط أو محظور، استنادًا إلى اثني عشر طلبًا من وحدات الأعمال",
+      "level": "Applied",
+      "slides": [
+        "day1#recap-levels",
+        "day1#five-uses",
+        "day1#national-floor",
+        "day1#derived-inherits",
+        "day1#training-cannot-undo",
+        "day1#purpose-secondary",
+        "day1#source-licence",
+        "day1#hosting-tiers",
+        "day1#three-decisions",
+        "day1#worked-permits",
+        "day1#check-s1",
+        "day1#lab-1-1-debrief"
+      ],
+      "activities": [
+        "day1#check-s1-q1"
+      ],
+      "sessions": [
+        "day1/1"
+      ],
+      "labs": [
+        "1.1"
+      ],
+      "questions": [
+        "q-elig-01",
+        "q-elig-02",
+        "q-elig-03",
+        "q-elig-04",
+        "q-elig-05",
+        "q-elig-06"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO2",
+      "text": "يختبر مساعدًا قائمًا على الاسترجاع بحثًا عن تسرب الصلاحيات (permission leakage)، ويحدد مرشّح وسوم التصنيف الذي يسدّه، على 300 وثيقة موسومة بتصنيفاتها وثلاثة أدوار",
+      "level": "Applied",
+      "slides": [
+        "day1#assistant-path",
+        "day1#labels-at-indexing",
+        "day1#filter-before-ranking",
+        "day1#three-dimensions",
+        "day1#generation-gets-public",
+        "day1#how-to-test",
+        "day1#log-line",
+        "day1#recall-matters",
+        "day1#filter-cannot-fix",
+        "day1#check-s2",
+        "day1#lab-1-2-debrief",
+        "day2#review-day1"
+      ],
+      "activities": [
+        "day1#check-s2-q1"
+      ],
+      "sessions": [
+        "day1/2"
+      ],
+      "labs": [
+        "1.2"
+      ],
+      "questions": [
+        "q-leak-01",
+        "q-leak-02",
+        "q-leak-03",
+        "q-leak-04",
+        "q-leak-05",
+        "q-leak-06"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO3",
+      "text": "يهيئ صلاحيات الوكيل لكل أداة بحيث تكون محددة النطاق أو للقراءة فقط أو مشروطة بموافقة، عند التعامل مع وكيل يتصل بخادمَي أدوات",
+      "level": "Applied",
+      "slides": [
+        "day2#how-agent-acts",
+        "day2#semantic-layer",
+        "day2#four-modes",
+        "day2#fields-handles",
+        "day2#tool-output-injection",
+        "day2#who-approves",
+        "day2#scripted-test",
+        "day2#check-s3",
+        "day2#debrief-2-1"
+      ],
+      "activities": [
+        "day2#check-s3-q1"
+      ],
+      "sessions": [
+        "day2/1"
+      ],
+      "labs": [
+        "2.1"
+      ],
+      "questions": [
+        "q-agent-01",
+        "q-agent-02",
+        "q-agent-03",
+        "q-agent-04",
+        "q-agent-05",
+        "q-agent-06"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO4",
+      "text": "يراجع شروط مقدمي الخدمة بشأن الاحتفاظ والتدريب على المدخلات وموطن البيانات والحذف، ويقرر فئات البيانات التي يجوز إرسالها، استنادًا إلى شروط اصطناعية لمقدمَي خدمة اثنين",
+      "level": "Performance",
+      "slides": [
+        "day2#provider-items",
+        "day2#transfer",
+        "day2#check-s4",
+        "day2#debrief-2-2"
+      ],
+      "activities": [
+        "day2#check-s4-q1"
+      ],
+      "sessions": [
+        "day2/2"
+      ],
+      "labs": [
+        "2.2"
+      ],
+      "questions": [
+        "q-terms-01",
+        "q-terms-02",
+        "q-terms-03",
+        "q-terms-04"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO5",
+      "text": "يدافع عن معيار لاستخدام البيانات في الذكاء الاصطناعي يتضمن قواعد للتسجيل والاحتفاظ، وعن سجل قرار لحالة واحدة، عند التعامل مع وكيل للرد على المواطنين يستخدم ملفات القضايا",
+      "level": "Performance",
+      "slides": [
+        "day2#logs-are-data",
+        "day2#change-control",
+        "day2#risk-rating",
+        "day2#register",
+        "day2#check-logs"
+      ],
+      "activities": [
+        "day2#check-logs-q1"
+      ],
+      "sessions": [
+        "day2/2"
+      ],
+      "labs": [
+        "2.2"
+      ],
+      "questions": [
+        "q-logs-01",
+        "q-logs-02",
+        "q-logs-03",
+        "q-logs-04",
+        "q-logs-05"
+      ],
+      "covered": true
+    }
+  ]
+}
